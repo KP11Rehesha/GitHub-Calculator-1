@@ -3,7 +3,7 @@ package app;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("My git app. Super!");
+        System.out.println("Super app!");
 
         int a = 8;
         int b = 2;
