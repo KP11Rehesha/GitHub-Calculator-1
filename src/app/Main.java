@@ -8,41 +8,35 @@ public class Main {
         System.out.println("Calculator for base calculations");
         System.out.println("Version 1.0");
 
-        myNumbers numbers = declaration();
+        MyNumbers numbers = declaration();
 
         int c = add(numbers.a, numbers.b);
-        System.out.println(c);
+        System.out.println(numbers.a + "+" + numbers.b + "=" + c);
         int d = multiply(numbers.a, numbers.b);
-        System.out.println(d);
+        System.out.println(numbers.a + "*" + numbers.b + "=" + d);
         int x = subtraction(numbers.a, numbers.b);
-        System.out.println(x);
+        System.out.println(numbers.a + "-" + numbers.b + "=" + x);
         int y = division(numbers.a, numbers.b);
-        System.out.println(y);
+        System.out.println(numbers.a + "/" + numbers.b + "=" + y);
     }
-    private static myNumbers declaration(){
+
+    private static MyNumbers declaration() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("a = ");
         int a = scanner.nextInt();
         System.out.print("b = ");
         int b = scanner.nextInt();
         scanner.close();
-        return new myNumbers(a, b);
+        return new MyNumbers(a, b);
     }
-    final static class myNumbers {
+
+    final static class MyNumbers {
         private final int a;
         private final int b;
 
-        public myNumbers(int a, int b) {
+        public MyNumbers(int a, int b) {
             this.a = a;
             this.b = b;
-        }
-
-        public int getFirst() {
-            return a;
-        }
-
-        public int getSecond() {
-            return b;
         }
     }
 
